@@ -4,40 +4,40 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
 
-    <!-- !!!! Driver Class Path !!!! -->
-    <!--<classPathEntry location="C:\Users\nbfujx\.m2\repository\mysql\mysql-connector-java\5.1.35\mysql-connector-java-5.1.35.jar"/>-->
+     !!!! Driver Class Path !!!!
+    <classPathEntry location="D:\Maven\mysql\mysql-connector-java\8.0.11\mysql-connector-java-8.0.11.jar"/>
 
-    <!--<context id="context" targetRuntime="MyBatis3">-->
-        <!--<commentGenerator>-->
-            <!--<property name="suppressAllComments" value="false"/>-->
-            <!--<property name="suppressDate" value="true"/>-->
-        <!--</commentGenerator>-->
+    <context id="context" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
 
-        <!--&lt;!&ndash; !!!! Database Configurations !!!! &ndash;&gt;-->
-        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://47.97.198.227/goku_coredb" userId="root" password="fjxBB123zdhbda!"/>-->
+        <!-- !!!! Database Configurations !!!! -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/goku_coredb" userId="root" password="root"/>
 
-        <!--<javaTypeResolver>-->
-            <!--<property name="forceBigDecimals" value="false"/>-->
-        <!--</javaTypeResolver>-->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
 
-        <!--&lt;!&ndash; !!!! Model Configurations !!!! &ndash;&gt;-->
-        <!--<javaModelGenerator targetPackage="com.goku.jjks.model" targetProject="src/main/java">-->
-            <!--<property name="enableSubPackages" value="false"/>-->
-            <!--<property name="trimStrings" value="true"/>-->
-        <!--</javaModelGenerator>-->
+        <!-- !!!! Model Configurations !!!! -->
+        <javaModelGenerator targetPackage="com.goku.jjk.model" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
 
-        <!--&lt;!&ndash; !!!! Mapper XML Configurations !!!! &ndash;&gt;-->
-        <!--<sqlMapGenerator targetPackage="mapping/sys" targetProject="src/main/resources">-->
-            <!--<property name="enableSubPackages" value="false"/>-->
-        <!--</sqlMapGenerator>-->
+        <!-- !!!! Mapper XML Configurations !!!! -->
+        <sqlMapGenerator targetPackage="mapping/sys" targetProject="src/main/resources">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
 
-        <!--&lt;!&ndash; !!!! Mapper Interface Configurations !!!! &ndash;&gt;-->
-        <!--<javaClientGenerator targetPackage="com.goku.jjks.mapper" targetProject="src/main/java" type="XMLMAPPER">-->
-            <!--<property name="enableSubPackages" value="false"/>-->
-        <!--</javaClientGenerator>-->
+        <!-- !!!! Mapper Interface Configurations !!!! -->
+        <javaClientGenerator targetPackage="com.goku.jjk.mapper" targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
 
-        <!--&lt;!&ndash; !!!! Table Configurations !!!! &ndash;&gt;-->
-        <!--<table tableName="sys_log" domainObjectName="SysLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
-               <!--enableUpdateByExample="false"/>-->
-    <!--</context>-->
+        <!-- !!!! Table Configurations !!!! -->
+        <table tableName="sys_log" domainObjectName="SysLog" enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false"/>
+    </context>
 </generatorConfiguration>
